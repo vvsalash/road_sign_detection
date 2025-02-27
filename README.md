@@ -1,6 +1,20 @@
 # road_sign_detection
 
-## Процесс обработки данных для BDD100K
+## Подготовка датасетов
+
+### **`prepare_dataset1_script.py`:**
+- скачивает датасет https://www.kaggle.com/datasets/andrewmvd/road-sign-detection/data
+- конвертирует разметку из xml в формат YOLOv8
+- в результате имеем папку `dataset1`, в ней папка `images` с png-картинками и `annotations` с txt-файлами разметки
+- классы: Trafic Light, Stop, Speedlimit, Crosswalk
+
+### **`prepare_dataset2_script.py`:**
+- скачивает датасет https://www.kaggle.com/datasets/pkdarabi/cardetection
+- переносит нужные папки, удаляет лишние папки и файлы
+- в результате имеем папку `dataset2`, в ней папки `train`, `test`, `val`, в каждой из которых папка `images` с jpg-картинками и `labels` с txt-файлами разметки
+- классы: Green Light, Red Light, Speed Limit 10, Speed Limit 100, Speed Limit 110, Speed Limit 120, Speed Limit 20, Speed Limit 30, Speed Limit 40, Speed Limit 50, Speed Limit 60, Speed Limit 70, Speed Limit 80, Speed Limit 90, Stop
+
+### **`prepare_dataset3_script.py`:**
 
 ### Шаги:
 
@@ -29,19 +43,4 @@
     - В результате, после выполнения всех шагов, у вас будет готовый датасет, разделенный на тренировочную, валидационную и тестовую части, с аннотированными изображениями и сбалансированным количеством изображений с и без дорожных знаков.
 
 
-
-
-## Подготовка датасетов
-
-### **`prepare dataset1 script.py`:**
-- скачивает датасет https://www.kaggle.com/datasets/andrewmvd/road-sign-detection/data
-- конвертирует разметку из xml в формат YOLOv8
-- в результате имеем папку `dataset1`, в ней папка `images` с png-картинками и `annotations` с txt-файлами разметки
-- классы: Trafic Light, Stop, Speedlimit, Crosswalk
-
-### **`prepare dataset2 script.py`:**
-- скачивает датасет https://www.kaggle.com/datasets/pkdarabi/cardetection
-- переносит нужные папки, удаляет лишние папки и файлы
-- в результате имеем папку `dataset2`, в ней папки `train`, `test`, `val`, в каждой из которых папка `images` с jpg-картинками и `labels` с txt-файлами разметки
-- классы: Green Light, Red Light, Speed Limit 10, Speed Limit 100, Speed Limit 110, Speed Limit 120, Speed Limit 20, Speed Limit 30, Speed Limit 40, Speed Limit 50, Speed Limit 60, Speed Limit 70, Speed Limit 80, Speed Limit 90, Stop
 
